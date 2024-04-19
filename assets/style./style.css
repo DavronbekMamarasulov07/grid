@@ -256,7 +256,7 @@ a{
 @media only screen and (max-width:1240px){
     .product-content{
         grid-template-columns: repeat(2, 1fr);
-        gap:20px  40px;
+        gap:30px  40px;
     }
 
     .product-body{
@@ -369,9 +369,7 @@ a{
 }
 
 @media only screen and (max-width:370px){
-    .card-img:nth-child(7){
-        left: 0px;
-    }
+   
 
     .card-img:nth-child(7){
         left: 18px;
@@ -399,7 +397,13 @@ a{
         gap: 0 10px;
     }
      
+}
 
+@media only screen and (max-width:319px){
+   
+    .card-footer--link a{
+        font-size: 14px;
+    }
 }
 
 
