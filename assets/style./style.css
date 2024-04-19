@@ -1,0 +1,416 @@
+@font-face {
+    font-family: Source Sans Pro;
+    src: url(../fonts/Source\ Sans\ Pro.woff2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#product{
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.product-wrapper{
+    display: grid;
+    grid-template-areas: 
+    "header header header header header"
+    "body body body body body"
+    "content content content content content";
+    gap: 10px;
+}
+
+.product-body{
+    margin-block: 30px 50px;
+}
+
+.product-header{
+    grid-area: header;
+}
+
+.product-body{
+    grid-area: body;
+}
+
+.product-content{
+    grid-area: content;
+}
+
+
+.product-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+
+.product-card {
+    background-color:#fff;
+    overflow: hidden;
+    transition: .5s;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+
+.product-card:hover{
+    transform: scale(1.1);
+    box-shadow: rgb(47, 205, 112) 0px 5px 15px;
+}
+
+.produts-title{
+    font-family: Source Sans Pro;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+    color: #122118;
+}
+
+.custom{
+    color:rgb(47, 205, 112);
+}
+
+
+.product-text{
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: center;
+    color:  #020202;
+    opacity: 50%;
+}
+
+
+
+.card-header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0 10px;
+}
+
+.card-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    max-width: 190px;
+}
+
+.card-list--item a{
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.11px;
+    text-align: left;
+    color:#020202;
+    opacity: 50%;
+}
+
+.two a{
+    font-family: Source Sans Pro;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25.14px;
+    text-align: left;
+    color:#020202;
+    opacity: 100%;
+}
+
+.card-wrapper--text{
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: left;
+    color:  #020202;
+    opacity: 50%;
+}
+
+
+
+.card-footer{
+    display: flex;
+    
+    gap: 0 20px;
+    justify-content: space-between; 
+}
+
+.card-footer--link a{
+    white-space: nowrap;
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.11px;
+    text-align: left;
+    color: #2FCD70;
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+}
+
+.card-footer--images{
+    max-width: 141px;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.card-img{
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: #2FCD70;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img > img{
+    overflow: hidden;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-img:first-child{
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.card-img:nth-child(2){
+    position: absolute;
+    left: 18px;
+    z-index: 2;
+}
+
+.card-img:nth-child(3){
+    position: absolute;
+    left: 36px;
+    z-index: 3;
+}
+
+.card-img:nth-child(4){
+    position: absolute;
+    left: 54px;
+    z-index: 4;
+}
+
+
+.card-img:nth-child(5){
+    position: absolute;
+    left: 72px;
+    z-index: 5;
+}
+
+
+.card-img:nth-child(6){
+    position: absolute;
+    left: 90px;
+    z-index: 6;
+}
+
+.card-img:nth-child(7){
+    position: absolute;
+    left: 108px;
+    z-index: 7;
+}
+
+.plus{
+    background-color: #FD865B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2FCD70;
+}
+
+.unit{
+    display: none;
+}
+
+@media only screen and (max-width:1240px){
+    .product-content{
+        grid-template-columns: repeat(2, 1fr);
+        gap:20px  40px;
+    }
+
+    .product-body{
+        margin-block: 20px 40px;
+    }
+    
+}
+
+@media only screen and (max-width:1100px){
+
+    .product-content{
+        grid-template-columns:1fr 1fr;
+    }
+  
+    .product-body{
+        margin-block: 10px 20px;
+    }
+
+    .product-card{
+        gap: 10px 0;
+    }
+
+}
+
+@media only screen and (max-width:767px){
+     .product-content{
+        grid-template-columns:1fr ;
+    }
+}
+
+
+
+
+@media only screen and (max-width:540px){
+
+    .produts-title{
+        font-size: 30px;
+    }
+
+    .product-text{
+        line-height: 25px;
+    }
+
+    .product-body{
+        margin-block: 0px 10px;
+    }
+
+    .product-card{
+        gap: 10px 0;
+    }
+
+    .card-wrapper--text{
+        line-height: 25px;
+    }
+
+}
+
+@media only screen and (max-width:480px){
+    .unit-img{
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+        align-items: center;
+        
+    }
+
+    .unit{
+        display: block;
+    }
+
+    .unit-two{
+        display: none;
+    }
+
+    .card-img{
+        display: none;
+    }
+
+    .plus{
+        display: block;
+    }
+
+    .card-img:nth-child(7){
+        left: 58px;
+    }
+
+    
+    .card-img:first-child{
+        position: absolute;
+        left: 18;
+        z-index: 1;
+        display: block;
+    }
+    
+    .card-img:nth-child(4){
+        position: absolute;
+        left: 18px;
+        z-index: 2;
+        display: block;
+    }
+
+    .card-img:nth-child(7){
+        left: 36px;
+        display: block;
+    }
+
+    .card-footer{
+        gap: 0 40px;
+    }
+}
+
+@media only screen and (max-width:370px){
+    .card-img:nth-child(7){
+        left: 0px;
+    }
+
+    .card-img:nth-child(7){
+        left: 18px;
+    }
+    
+    .card-img:first-child{
+        position: absolute;
+        left: 18;
+        z-index: 1;
+        display: none;
+    }
+    .card-img:nth-child(4){
+        position: absolute;
+        left: 18px;
+        z-index: 2;
+        display: none;
+    }
+
+    .card-img:nth-child(7){
+        left: 16px;
+        
+    }
+
+    .card-footer{
+        gap: 0 10px;
+    }
+     
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
