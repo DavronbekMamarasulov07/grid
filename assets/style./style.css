@@ -110,7 +110,7 @@ a{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 0 10px;
+    gap: 0 30px;
 }
 
 .card-list{
